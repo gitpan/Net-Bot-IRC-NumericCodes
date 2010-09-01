@@ -6,6 +6,6 @@ _build*
 pm_to_blib*
 *.tar.gz
 .lwpcookies
-Net-Bot-IRC-NumericCodes-*
 cover_db
 .git
+*.swp

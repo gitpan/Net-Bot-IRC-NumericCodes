@@ -173,11 +173,11 @@ Net::Bot::IRC::NumericCodes - A module for abstracting IRC numeric codes.
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -196,11 +196,11 @@ our $VERSION = '0.01';
         # Do some other stuff.
     }
     
-For a full list of codes please read L<RFC 2812|<a href="http://tools.ietf.org/html/rfc2812#page-43">http://tools.ietf.org/html/rfc2812#page-43</a>>.
+For a full list of codes please read L<< http://tools.ietf.org/html/rfc2812 >>.
 
 =head1 AUTHOR
 
-Caudill, Mark, C<< <markcaudill at me.com> >>
+Caudill, Mark, L<< mailto:markcaudillATme.com >>
 
 =head1 BUGS
 
@@ -213,6 +213,9 @@ You can find documentation for this module with the perldoc command.
 
     perldoc Net::Bot::IRC::NumericCodes
 
+=head1 DEVELOPMENT
+
+You can find the current sources for this at L<< git://github.com/flakblas/Net-Bot-IRC-NumericCodes.git >>.
 
 =head1 COPYRIGHT & LICENSE
 
