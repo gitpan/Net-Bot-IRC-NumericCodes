@@ -200,7 +200,7 @@ For a full list of codes please read L<< http://tools.ietf.org/html/rfc2812 >>.
 
 =head1 AUTHOR
 
-Caudill, Mark, L<< mailto:markcaudillATme.com >>
+Caudill, Mark, L<< mailto:mcaudillATcpan.org >>
 
 =head1 BUGS
 

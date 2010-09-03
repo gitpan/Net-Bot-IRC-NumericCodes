@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'Net::Bot::IRC::NumericCodes',
-    AUTHOR              => q{Mark Caudill <markcaudill@me.com>},
+    AUTHOR              => q{Mark Caudill <mcaudill@cpan.org>},
     VERSION_FROM        => 'lib/Net/Bot/IRC/NumericCodes.pm',
     ABSTRACT_FROM       => 'lib/Net/Bot/IRC/NumericCodes.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
