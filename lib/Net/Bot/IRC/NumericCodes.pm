@@ -1,8 +1,45 @@
-package NumericCodes;
+package Net::Bot::IRC::NumericCodes;
 
 use strict;
+use warnings;
 
 use Carp;
+
+=head1 NAME
+
+Net::Bot::IRC::NumericCodes - A module for abstracting IRC numeric codes.
+
+=head1 VERSION
+
+Version 0.05
+
+=cut
+
+our $VERSION = '0.05';
+
+=head1 SYNOPSIS
+
+    use Net::Bot::IRC::NumericCodes;
+    
+    my $nc = IRC::NumericCodes->new();
+    
+    # Lookup the numeric based on the code string.
+    if ($code == $nc->str2num("RPL_WELCOME")) {
+        # Do something.
+    }
+
+    # Look up the code string based on the numeric code.
+    if ($strcode eq $nc->num2str(001)) {
+        # Do some other stuff.
+    }
+    
+For a full list of codes please read L<< http://tools.ietf.org/html/rfc2812 >>.
+
+=head1 FUNCTIONS
+
+=head2 new()
+
+=cut
 
 sub new {
     my $class = shift;
@@ -121,10 +158,10 @@ sub new {
     return $self;
 }
 
+=head2 num2str($numericCode)
 
-##
-# num2str(num) - Resolve a numeric code to it's string form.
-##
+=cut
+
 sub num2str {
     my $self = shift;
     my $num  = shift;
@@ -144,11 +181,10 @@ sub num2str {
     croak "Unable to resolve numeric: $num.";
 }
 
+=head2 str2num($strCode)
 
-##
-# str2num(str) - Convert a reply string (e.g. RPL_WELCOME) to it's
-#                numeric code.
-##
+=cut
+
 sub str2num {
     my $self = shift;
     my $str  = shift;
@@ -164,39 +200,6 @@ sub str2num {
         croak "Unable to resolve the numeric code for \"$str\".";
     }
 }
-
-
-
-=head1 NAME
-
-Net::Bot::IRC::NumericCodes - A module for abstracting IRC numeric codes.
-
-=head1 VERSION
-
-Version 0.04
-
-=cut
-
-our $VERSION = '0.04';
-
-
-=head1 SYNOPSIS
-
-    use Net::Bot::IRC::NumericCodes;
-    
-    my $nc = IRC::NumericCodes->new();
-    
-    # Lookup the numeric based on the code string.
-    if ($code == $nc->str2num("RPL_WELCOME")) {
-        # Do something.
-    }
-
-    # Look up the code string based on the numeric code.
-    if ($strcode eq $nc->num2str(001)) {
-        # Do some other stuff.
-    }
-    
-For a full list of codes please read L<< http://tools.ietf.org/html/rfc2812 >>.
 
 =head1 AUTHOR
 
